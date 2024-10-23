@@ -16,6 +16,9 @@ createGrids = (numberOfrows) => {
   grids.forEach((grid) => {
     grid.style.width = `${size}vw`;
     grid.style.height = `${size}vh`;
+    grid.addEventListener("mouseover", () => {
+      grid.style.backgroundColor = "#7AB2D3";
+    });
   });
 };
 

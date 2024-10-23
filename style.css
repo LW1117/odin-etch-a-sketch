@@ -8,13 +8,10 @@
   flex-wrap: wrap;
   width: 100vw;
   height: 100vh;
+  background-color: #b9e5e8;
 }
 
 .grid {
-  border: 1px solid black;
+  border: 1px solid #4a628a;
   box-sizing: border-box;
-}
-
-.grid:hover {
-  background-color: black;
 }
