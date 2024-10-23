@@ -17,7 +17,8 @@ createGrids = (numberOfrows) => {
     grid.style.width = `${size}vw`;
     grid.style.height = `${size}vh`;
     grid.addEventListener("mouseover", () => {
-      grid.style.backgroundColor = "#7AB2D3";
+      let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+      grid.style.backgroundColor = `#${randomColor}`;
     });
   });
 };
