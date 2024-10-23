@@ -7,7 +7,7 @@ createGrids = (numberOfrows) => {
     newGrid.classList.add("grid");
     fragment.appendChild(newGrid);
   }
-  gridContainer.appendChild(fragment);
+  gridContainer.replaceChildren(fragment);
 
   let size = 100 / numberOfrows;
 
@@ -21,5 +21,17 @@ createGrids = (numberOfrows) => {
     });
   });
 };
-
 createGrids(16);
+
+const gridSizeInput = document.getElementById("grid-size-input");
+
+gridSizeInput.addEventListener("keypress", (event) => {
+  if (event.key == "Enter") {
+    let sizeOfGrid = gridSizeInput.value;
+    if (sizeOfGrid <= 100) {
+      createGrids(sizeOfGrid);
+    } else {
+      alert("Maximum size of grid is 100x100");
+    }
+  }
+});
