@@ -8,6 +8,15 @@ createGrids = (numberOfrows) => {
     fragment.appendChild(newGrid);
   }
   gridContainer.appendChild(fragment);
+
+  let size = 100 / numberOfrows;
+
+  const grids = document.querySelectorAll(".grid");
+
+  grids.forEach((grid) => {
+    grid.style.width = `${size}vw`;
+    grid.style.height = `${size}vh`;
+  });
 };
 
 createGrids(16);

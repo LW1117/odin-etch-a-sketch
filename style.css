@@ -6,9 +6,15 @@
 #grid-container {
   display: flex;
   flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
 }
 
 .grid {
-  flex: 1;
   border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.grid:hover {
+  background-color: black;
 }
