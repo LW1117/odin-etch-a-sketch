@@ -1,14 +1,13 @@
 const gridContainer = document.getElementById("grid-container");
 
-const fragment = document.createDocumentFragment();
+createGrids = (numberOfrows) => {
+  const fragment = document.createDocumentFragment();
+  for (let i = 0; i < numberOfrows * numberOfrows; i++) {
+    newGrid = document.createElement("div");
+    newGrid.classList.add("grid");
+    fragment.appendChild(newGrid);
+  }
+  gridContainer.appendChild(fragment);
+};
 
-let grid;
-const numberOfGrids = 16 * 16;
-
-for (let i = 0; i < numberOfGrids; i++) {
-  grid = document.createElement("div");
-  grid.classList.add("square");
-  fragment.appendChild(grid);
-}
-
-gridContainer.appendChild(fragment);
+createGrids(16);
